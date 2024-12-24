@@ -1,0 +1,7 @@
+<h1>Personajes de Harry Potter</h1>
+
+<ul>
+  <% @wizards.each do |wizard| %>
+    <li><strong>Nombre:</strong> <%= wizard.name %>, <strong>Locación:</strong> <%= wizard.location %>, <strong>Casa:</strong> <%= wizard.house %></li>
+  <% end %>
+</ul>
