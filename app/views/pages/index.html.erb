@@ -1,7 +1,11 @@
 <h1>Personajes de Harry Potter</h1>
 
 <ul>
-  <% @wizards.each do |wizard| %>
-    <li><strong>Nombre:</strong> <%= wizard.name %>, <strong>Locación:</strong> <%= wizard.location %>, <strong>Casa:</strong> <%= wizard.house %></li>
+  <% if @wizards.present? %>
+    <% @wizards.each do |wizard| %>
+      <li><strong>Nombre:</strong> <%= wizard.name %>, <strong>Locación:</strong> <%= wizard.location %>, <strong>Casa:</strong> <%= wizard.house %></li>
+    <% end %>
+  <% else %>
+    <li>No hay personajes disponibles.</li>
   <% end %>
 </ul>
